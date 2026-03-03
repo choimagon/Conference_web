@@ -3,7 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Index</title>
+
+  <title>Conference_web</title>
+
+  <!-- ✅ 파비콘 (같은 폴더에 favicon.ico 두면 됨) -->
+  <link rel="icon" href="favicon.ico" />
+  <!-- (선택) png 파비콘 쓸 때: <link rel="icon" type="image/png" href="favicon.png" /> -->
+
   <style>
     :root{
       --bg:#0b0f17; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#1f2937;
@@ -16,9 +22,17 @@
       color:var(--text);
     }
     .wrap{max-width:780px; margin:0 auto; padding:36px 18px 60px}
-    header{margin-bottom:18px}
-    h1{margin:0 0 8px; font-size:24px; letter-spacing:-0.02em}
-    p{margin:0; color:var(--muted); font-size:14px}
+    header{margin-bottom:18px; display:flex; align-items:center; gap:10px}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(17,24,39,.85);
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      font-size:18px;
+      user-select:none;
+    }
+    h1{margin:0; font-size:22px; letter-spacing:-0.02em}
     .card{
       margin-top:18px; background:rgba(17,24,39,.85); border:1px solid var(--line);
       border-radius:16px; padding:16px; box-shadow: var(--shadow); backdrop-filter: blur(6px);
@@ -33,45 +47,30 @@
       transition: .15s ease;
     }
     a.link:hover{ background:var(--btnHover); transform: translateY(-1px) }
-    .name{font-weight:600}
-    .hint{color:var(--muted); font-size:12px}
-    .arrow{opacity:.8}
-    footer{margin-top:14px; color:var(--muted); font-size:12px}
+    .name{font-weight:650}
+    .arrow{opacity:.85}
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
+      <div class="logo" aria-hidden="true">🌐</div>
       <h1>학회 목록</h1>
     </header>
 
     <section class="card">
       <div class="grid">
         <a class="link" href="wacv2026_papers_viewer.html">
-          <div>
-            <div class="name">WACV 2026</div>
-          </div>
+          <div class="name">📚 WACV 2026</div>
           <div class="arrow">→</div>
         </a>
 
         <a class="link" href="?.html">
-          <div>
-            <div class="name">??</div>
-          </div>
+          <div class="name">📌 ??</div>
           <div class="arrow">→</div>
         </a>
-        <!-- 필요하면 아래처럼 계속 추가 -->
-        <!--
-        <a class="link" href="C.html">
-          <div>
-            <div class="name">C.html</div>
-            <div class="hint">C 페이지로 이동</div>
-          </div>
-          <div class="arrow">→</div>
-        </a>
-        -->
       </div>
-
     </section>
   </div>
 </body>
